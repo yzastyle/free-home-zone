@@ -16,7 +16,7 @@ class if_else1 {
 					System.out.println(cold);
 		}
 		else {
-			System.out.println("Дядя, введи число, пожалуйста");   //test git
+			System.out.println("Дядя, введи число, пожалуйста");
 		}
 	}
 }

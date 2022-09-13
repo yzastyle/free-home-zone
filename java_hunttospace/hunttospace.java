@@ -261,5 +261,19 @@ class hunttospace {
 				}
 			}
 		}
+		if (CO) {
+			System.out.println("Vetka povar");
+		}
+		else if (DO) {
+			System.out.println("Venrf doctar");
+		}
+		else {
+			if (WM) {
+				System.out.println("vetka strelka");
+			}
+			else {
+				System.out.println("DE");
+			}
+		}
 	}
 }

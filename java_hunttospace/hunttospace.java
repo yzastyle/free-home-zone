@@ -209,7 +209,7 @@ class hunttospace {
 			System.out.println("Извините, но вы не прошли тест политической благонадежности, ваш уровень - дисидент");
 			System.out.println("К месту машины по найму Р-33хХ2 вызвана бригада чекистантов");
 		}
-		else if ((politsumm > 20) && (politsumm < 35)) {
+		else if ((politsumm > 20) && (politsumm < 32)) {
 			System.out.println("Представим ситуацию, если вы выдите, как некто срывает плакаты или портит плакаты с нашим могучим лидером");
 			System.out.println("Вы: А) Доложите об этом в ближайший чекист-пункт. Б) Оставите это без внимания");
 			while (console.hasNextLine()) {
@@ -220,7 +220,7 @@ class hunttospace {
 				}
 				else if (q.equalsIgnoreCase("Б")) {
 					System.out.println("Извините, но вы не прошли тест политической благонадежности, ваш уровень - склонный к предательству");
-					break;
+					return;
 				}
 				else {
 					System.out.println("Отвечайте, пожалуйста, \"А\" или \"Б\"");
@@ -249,7 +249,7 @@ class hunttospace {
 			}
 			else {
 				if (q.equalsIgnoreCase("WM")) {
-					WN = true;
+					WM = true;
 					break;
 				}
 				else if (q.equalsIgnoreCase("DE")) {
@@ -262,7 +262,24 @@ class hunttospace {
 			}
 		}
 		if (CO) {
-			System.out.println("Vetka povar");
+			System.out.println("Работали ли вы когда-нибудь поваром на космическом корабле?");
+			int work = 0;
+			while (console.hasNextLine()) {
+				String q = console.nextLine();
+				if (q.equalsIgnoreCase("Да")) {
+					work = 10;
+					break;
+				}
+				else if (q.equalsIgnoreCase("Нет")) {
+					break;
+				}
+				else {
+					System.out.println("Отвечайте \"Да\" или \"Нет\", пожалуйста.");
+				}
+			}
+			System.out.println("Назовите, пожалуйста, какие по вашему мнению 4 основных блюда путенского пехотинца.");
+			String[] putmenu = {"", "", "", ""};
+			
 		}
 		else if (DO) {
 			System.out.println("Venrf doctar");

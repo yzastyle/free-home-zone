@@ -227,5 +227,39 @@ class hunttospace {
 				}
 			}
 		}
+		System.out.println("Переходдим к основной части нашего анализитора. Выбора роли для нашего экипажа");
+		System.out.println("На текущей момент к нам на корабль требуются люди следующий специальностей:");
+		System.out.println("CO - Повар");
+		System.out.println("DO - Врач");
+		System.out.println("WM - стрелок");
+		System.out.println("DE - дебик");
+		boolean CO = false;
+		boolean DO = false;
+		boolean WM = false;
+		boolean DE = false;
+		while (console.hasNextLine()) {
+			String q = console.nextLine();
+			if (q.equalsIgnoreCase("CO")) {
+				CO = true;
+				break;
+			}
+			else if (q.equalsIgnoreCase("DO")) {
+				DO = true;
+				break;
+			}
+			else {
+				if (q.equalsIgnoreCase("WM")) {
+					WN = true;
+					break;
+				}
+				else if (q.equalsIgnoreCase("DE")) {
+					DE = true;
+					break;
+				}
+				else {
+					System.out.println("Указывайте, пожалуйста, одно из значений: CO, DO, WM, DE");
+				}
+			}
+		}
 	}
 }

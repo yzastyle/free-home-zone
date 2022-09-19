@@ -9,9 +9,11 @@ class hunttospace {
 		String I4 = "                                                                                                 Мистер робот...";
 		String I5 = "                                                                                                    Хайль ПУТЕН!";
 		System.out.println(I1 + '\n' + I2 + '\n' + I3 + '\n' + I4 + '\n' + I5);	
-		System.out.println("Введите, пожалйуста, ваше ФИО.");
-		String fio = null;
+	/*	System.out.println("Введите, пожалйуста, ваше ФИО.");
+		String fio = null; */
 		Scanner console = new Scanner(System.in);
+		setFio(console);
+		/*Scanner console = new Scanner(System.in);
 		while (console.hasNextLine()) {
 			String s = console.nextLine();
 			if (s.matches("[^0-9]*")) {
@@ -291,6 +293,6 @@ class hunttospace {
 			else {
 				System.out.println("DE");
 			}
-		}
-	}
+		} */
+	} 
 }

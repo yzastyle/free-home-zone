@@ -3,38 +3,13 @@ import java.util.Arrays;
 
 class hunttospace {
 	public static void main(String args[]) {
-		CommonText text1 = new CommonText();
-		text1.preview();
+		CommonText.preview();
 		Scanner console = new Scanner(System.in);
 		BioForm BF = new BioForm();
 		BF.setFio(console);
-		text1.goToBioPart();
-	/*	System.out.println("Автоматический определитель ДВЕТЫСЯЧИ путем универсального тудасюда определит вашу профпригодность для экипажа корабля =ЛЕТУЧИЙ ПУТИНЕЦ=");
-		System.out.println("Следуйте инструкции ниже, пожалуйста...");
-		System.out.print("");
-		System.out.print("");
-		System.out.print("");
-		System.out.println(fio + " ответье, пожалуйста на несколько общих вопросов.");
-		System.out.println("Сколько вам лет? " + fio);
-		int age = 0;
-		while (console.hasNextLine()) {
-			String b = console.nextLine();
-			if (b.matches("[0-9]*")) {
-				age = Integer.parseInt(b);
-				if ((age < 18) || (age > 65)) {
-					System.out.println("Приносим свои извенения " + fio + ", но минимальный допустимый возраст трудоустройства на наш корабль от 18 до 65 лет.");
-					return;
-				}
-				else {
-					System.out.println("Спасибо" + " " + fio);
-					break;
-					 }
-			}
-			else {
-		  	  System.out.println("Возраст введен некорректно, используте, пожалуйста, цифры и повторите попытку.");
-			}
-		}
-		double weigh = 0;
+		CommonText.goToBioPart(BF.getFio());
+		BF.setAge(console);
+		/*double weigh = 0;
 		System.out.println("Каков ваш вес?");
 		while (console.hasNextLine()) {
 			String b = console.nextLine();

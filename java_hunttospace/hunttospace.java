@@ -9,6 +9,7 @@ class hunttospace {
 		BF.setFio(console);
 		CommonText.goToBioPart(BF.getFio());
 		BF.setAge(console);
+		BF.setWeigh(console);
 		/*double weigh = 0;
 		System.out.println("Каков ваш вес?");
 		while (console.hasNextLine()) {

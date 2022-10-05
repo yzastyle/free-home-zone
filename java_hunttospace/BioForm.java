@@ -106,7 +106,10 @@ class BioForm {
 		int sickpersoncount = 0;
 		while (console.hasNextLine()) {
 			c = console.nextLine();
-			if (c.equalsIgnoreCase("Да")) {
+			if (!(c.equalsIgnoreCase("Да") || c.equalsIgnoreCase("Нет"))) {
+				System.out.println("Отвечайте, пожалуйста \"Да\" или \"Нет\"");	
+			}
+			else if (c.equalsIgnoreCase("Да")) {
 				System.out.println("Напишите, пожалуйста, ваши заболевания через запятую");
 				c = console.nextLine();
 				personsick = c.split(",");
@@ -115,22 +118,19 @@ class BioForm {
 					for (int j = 0; j < personsick.length; j++) {
 						if (sicklist[i].equalsIgnoreCase(personsick[j].trim())) {
 							System.out.println("Извините, но у вас присутствует критическое заболевание, вы нам не подходите.");
-							return;
+							System.exit(1);
 						}
 						else if (sickpersoncount > 5) {
 							System.out.println("Извините, но у вас превышено количество хронических заболеваний, вы нам не подходите.");
-							return;
+							System.exit(1);
 						}
 					}
 				}
 				break;	
 			}
-			else if (c.equalsIgnoreCase("Нет")) {
+			else {
 				noSick = true;
 				break;
-			}
-			else {
-				System.out.println("Отвечайте, пожалуйста \"Да\" или \"Нет\"");
 			}
 		}
 	}

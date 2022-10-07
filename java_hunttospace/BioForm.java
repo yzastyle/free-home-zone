@@ -149,7 +149,10 @@ class BioForm {
 		System.out.println("Ответ должен быть \"Да\" или \"Нет\"");
 		while (console.hasNextLine()) {
 			String q = console.nextLine();
-			if (q.equalsIgnoreCase("Да") || q.equalsIgnoreCase("Нет")) {
+			if (!(q.equalsIgnoreCase("Да") || q.equalsIgnoreCase("Нет"))) {
+				System.out.println("Отвечайте, пожалуйста \"Да\" или \"Нет\"");
+			}
+			else {
 				if (q.equalsIgnoreCase("Да")) {
 					System.out.println("Подскажите, пожалуйста, сколько раз вы были в открытом космосе?");
 					YesSpace = console.nextInt();
@@ -159,12 +162,11 @@ class BioForm {
 					System.out.println("Спасибо за информацию.");
 				}
 				break;
-			}
-			else {
-				System.out.println("Отвечайте, пожалуйста \"Да\" или \"Нет\"");
+				}
 			}
 		}
+	public int getYesSpace() {
+		return this.YesSpace;	
 	}
-		
 	
 }

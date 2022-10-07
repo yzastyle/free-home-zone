@@ -19,4 +19,24 @@ class CommonText {
 		System.out.print("");
 		System.out.println(str + " ответье, пожалуйста на несколько общих вопросов.");
 	}
+
+	public static void endBioPart(String fio1, int age1, double weigh1, double tall1, String[] personSick1, boolean noSick, int SpaceCount) {
+		System.out.println("Общая биометральная часть опроса подошла к концу, давайте подвидем итоги:");
+		System.out.println("ФИО: " + fio1);
+		System.out.println("Возраст: " + age1);
+		System.out.println("Рост: " + tall1);
+		System.out.println("Вес " + weigh1);
+		if (noSick) {
+			System.out.println("Хранические заболевания отсутствуют.");
+		}
+		else {
+			System.out.println("Хронические заболевания: " + Arrays.toString(personSick1));
+		}
+		if (SpaceCount > 0) {
+			System.out.println("Путешествия открытом космосе. " +  SpaceCount + " раз.");
+		}
+		else {
+			System.out.println("В открытом космосе не бывали.");
+		}
+	}
 }

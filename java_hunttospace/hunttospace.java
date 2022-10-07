@@ -13,28 +13,8 @@ class hunttospace {
 		BF.setTall(console);
 		BF.setSick(console);
 		BF.setSpaceCount(console);
+		CommonText.endBioPart(BF.getFio(), BF.getAge(), BF.getWeigh(), BF.getTall(), BF.getPersonsick(), BF.getNoSick(), BF.getYesSpace());
 		/*
-		System.out.println("Отлично, Вы нам подходите. Перейдем к следующему вопросу.");
-		System.out.println("Бывали ли вы когда-нибудь в космосе?");
-		System.out.println("Ответ должен быть \"Да\" или \"Нет\"");
-		int YesSpace = 0;
-		while (console.hasNextLine()) {
-			String q = console.nextLine();
-			if (q.equalsIgnoreCase("Да") || q.equalsIgnoreCase("Нет")) {
-				if (q.equalsIgnoreCase("Да")) {
-					System.out.println("Подскажите, пожалуйста, сколько раз вы были в открытом космосе?");
-					YesSpace = console.nextInt();
-					System.out.println("Спасибо за информацию.");
-				}
-				else {
-					System.out.println("Спасибо за информацию.");
-				}
-				break;
-			}
-			else {
-				System.out.println("Отвечайте, пожалуйста \"Да\" или \"Нет\"");
-			}
-		}
 		System.out.println("Общая биометральная часть опроса подошла к концу, давайте подвидем итоги:");
 		System.out.println("ФИО: " + fio);
 		System.out.println("Возраст: " + age);

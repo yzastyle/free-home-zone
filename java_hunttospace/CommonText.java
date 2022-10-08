@@ -39,4 +39,11 @@ class CommonText {
 			System.out.println("В открытом космосе не бывали.");
 		}
 	}
+	
+	public static void goToPolitPart() {
+		System.out.println("Следующая часть анализатора, выявляет политическую благонадежность кандидата.");
+		System.out.println("На вопросы ниже, отвечайте, пожалуйста, цифрами от 1 до 10.");
+		System.out.println("Спасибо.");
+		System.out.println("");
+	}
 }

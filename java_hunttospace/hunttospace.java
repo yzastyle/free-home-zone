@@ -14,28 +14,10 @@ class hunttospace {
 		BF.setSick(console);
 		BF.setSpaceCount(console);
 		CommonText.endBioPart(BF.getFio(), BF.getAge(), BF.getWeigh(), BF.getTall(), BF.getPersonsick(), BF.getNoSick(), BF.getYesSpace());
+		CommonText.goToPolitPart();
+		PolitForm PF = new PolitForm();
+		PF.setPolitPart(console);
 		/*
-		System.out.println("Общая биометральная часть опроса подошла к концу, давайте подвидем итоги:");
-		System.out.println("ФИО: " + fio);
-		System.out.println("Возраст: " + age);
-		System.out.println("Рост: " + tall);
-		System.out.println("Вес " + weigh);
-		if (noSick) {
-			System.out.println("Хранические заболевания отсутствуют.");
-		}
-		else {
-			System.out.println("Хронические заболевания: " + Arrays.toString(personsick));
-		}
-		if (YesSpace > 0) {
-			System.out.println("Путешествия открытом космосе. " +  YesSpace + " раз.");
-		}
-		else {
-			System.out.println("В открытом космосе не бывали.");
-		}
-		System.out.println("Следующая часть анализатора, выявляет политическую благонадежность кандидата.");
-		System.out.println("На вопросы ниже, отвечайте, пожалуйста, цифрами от 1 до 10.");
-		System.out.println("Спасибо.");
-		System.out.println("");
 		System.out.println("Как вы относитесь к политической повестке нашей правящей партии \"Единственная Россия\"");
 		int politsumm = 0;
 		while (console.hasNextLine()) {

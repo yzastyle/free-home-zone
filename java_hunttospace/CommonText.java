@@ -46,4 +46,13 @@ class CommonText {
 		System.out.println("Спасибо.");
 		System.out.println("");
 	}
+	
+	public static void goToRolePart() {
+		System.out.println("Переходдим к основной части нашего анализитора. Выбора роли для нашего экипажа");
+		System.out.println("На текущей момент к нам на корабль требуются люди следующий специальностей:");
+		System.out.println("CO - Повар");
+		System.out.println("DO - Врач");
+		System.out.println("WM - стрелок");
+		System.out.println("DE - дебик");
+	}
 }

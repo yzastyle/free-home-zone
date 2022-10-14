@@ -17,83 +17,41 @@ class hunttospace {
 		CommonText.goToPolitPart();
 		PolitForm PF = new PolitForm();
 		PF.setPolitPart(console);
-		/*
-		System.out.println("Как вы относитесь к политической повестке нашей правящей партии \"Единственная Россия\"");
-		int politsumm = 0;
-		while (console.hasNextLine()) {
-			String q = console.nextLine();	
-			if (q.matches("[1-9]") || q.matches("10")) {
-				politsumm = Integer.parseInt(q);
-				break;
-				}
-			else {
-				System.out.println("Отвечайте, пожалуйста, цифрами от 1 до 10.");
-				}
-		}
-		System.out.println("");
-		System.out.println("Оцените личность нашего великого лидера, где 1 - слабый, 10 - сильнейший");
+		PF.setPolitLead(console);
+		PF.setPolitExternal(console);
+		PF.setPolitInternal(console);
+		PF.politResult(console, PF.getPolitSumm());
+		CommonText.goToRolePart();
+		boolean DO = false;
+		boolean WM = false;
+		boolean DE = false;
 		while (console.hasNextLine()) {
 			String q = console.nextLine();
-			if (q.matches("[1-9]") || q.matches("10")) {
-				politsumm = politsumm + Integer.parseInt(q);
+			if (!(q.equalsIgnoreCase("CO") || q.equalsIgnoreCase("DO") || q.equalsIgnoreCase("WM") || q.equalsIgnoreCase("DE"))) {
+				System.out.println("Указывайте, пожалуйста, одно из значений: CO, DO, WM, DE");
+			}
+			else if (q.equalsIgnoreCase("CO")) {
+				CO COrole = new CO();
+				COrole.workOnSpaceShip(console);
 				break;
 			}
 			else {
-				System.out.println("Отвечайте, пожалуйста, цифрами от 1 до 10.");
-			}
-		}
-		System.out.println("");
-		System.out.println("Оцените внешнюю политику нашего великого лидера, где 1 - максимально негативная, 10 - максимально позитивная");
-		while (console.hasNextLine()) {
-			String q = console.nextLine();
-			if (q.matches("[1-9]") || q.matches("10")) {
-				politsumm = politsumm + Integer.parseInt(q);
-				break;
-			}
-			else {
-				System.out.println("Отвечайте, пожалуйста, цифрами от 1 до 10.");
-			}
-		}
-		System.out.println("");
-		System.out.println("Оцените внутреннюю политику нашего великого лидера, где 1 - максимально негативная, 10 - максимально позитивная");
-		while (console.hasNextLine()) {
-			String q = console.nextLine();
-			if (q.matches("[1-9]") || q.matches("10")) {
-				politsumm = politsumm + Integer.parseInt(q);
-				break;
-			}
-			else {
-				System.out.println("Отвечайте, пожалуйста, цифрами от 1 до 10.");
-			}
-		}
-		if (politsumm <= 20) {
-			System.out.println("Извините, но вы не прошли тест политической благонадежности, ваш уровень - дисидент");
-			System.out.println("К месту машины по найму Р-33хХ2 вызвана бригада чекистантов");
-		}
-		else if ((politsumm > 20) && (politsumm < 32)) {
-			System.out.println("Представим ситуацию, если вы выдите, как некто срывает плакаты или портит плакаты с нашим могучим лидером");
-			System.out.println("Вы: А) Доложите об этом в ближайший чекист-пункт. Б) Оставите это без внимания");
-			while (console.hasNextLine()) {
-				String q = console.nextLine();
-				if (q.equalsIgnoreCase("А")) {
-					System.out.println("Спасибо, перейдем к следующей части нашего автоматического-найма");
+				if (q.equalsIgnoreCase("DO")) {
+					DO = true;
 					break;
 				}
-				else if (q.equalsIgnoreCase("Б")) {
-					System.out.println("Извините, но вы не прошли тест политической благонадежности, ваш уровень - склонный к предательству");
-					return;
+				else if (q.equalsIgnoreCase("WM")) {
+					WM = true;
+					break;
 				}
 				else {
-					System.out.println("Отвечайте, пожалуйста, \"А\" или \"Б\"");
+					DE = true;
+					break;
 				}
 			}
 		}
-		System.out.println("Переходдим к основной части нашего анализитора. Выбора роли для нашего экипажа");
-		System.out.println("На текущей момент к нам на корабль требуются люди следующий специальностей:");
-		System.out.println("CO - Повар");
-		System.out.println("DO - Врач");
-		System.out.println("WM - стрелок");
-		System.out.println("DE - дебик");
+		
+		/*
 		boolean CO = false;
 		boolean DO = false;
 		boolean WM = false;

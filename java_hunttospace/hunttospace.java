@@ -33,6 +33,8 @@ class hunttospace {
 			else if (q.equalsIgnoreCase("CO")) {
 				CO COrole = new CO();
 				COrole.workOnSpaceShip(console);
+				COrole.mainDishOnShip(console);
+				System.out.println("Очков опыта " + COrole.getCOwork());
 				break;
 			}
 			else {

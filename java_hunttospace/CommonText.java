@@ -23,9 +23,9 @@ class CommonText {
 	public static void endBioPart(String fio1, int age1, double weigh1, double tall1, String[] personSick1, boolean noSick, int SpaceCount) {
 		System.out.println("Общая биометральная часть опроса подошла к концу, давайте подвидем итоги:");
 		System.out.println("ФИО: " + fio1);
-		System.out.println("Возраст: " + age1);
-		System.out.println("Рост: " + tall1);
-		System.out.println("Вес " + weigh1);
+		System.out.println("Возраст: " + age1 + " лет");
+		System.out.println("Рост: " + tall1 + " см");
+		System.out.println("Вес " + weigh1 + " кг");
 		if (noSick) {
 			System.out.println("Хранические заболевания отсутствуют.");
 		}

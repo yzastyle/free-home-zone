@@ -34,7 +34,19 @@ class hunttospace {
 				CO COrole = new CO();
 				COrole.workOnSpaceShip(console);
 				COrole.mainDishOnShip(console);
-				System.out.println("Очков опыта " + COrole.getCOwork());
+				COrole.shortQandA(console);
+				if (COrole.getCOwork() < 37) {
+					System.out.println("Извините, но программа определила, что ваших навыков и знаний недостаточно.");
+					System.out.println("Вы нам не подходите. Попробуйте еще раз, когда наберетесь опыта.");
+				}
+				else if (COrole.getCOwork() < 55) {
+					COrole.finalQuest(console);
+				}
+				else {
+					System.out.println("У нас хорошие новости для вас!");
+					System.out.println("Вы нам подходите!");
+					System.out.println("Ожидайте, свями свяжется наш специалист");
+				}
 				break;
 			}
 			else {

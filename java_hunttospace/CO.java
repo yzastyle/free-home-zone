@@ -86,8 +86,70 @@ class CO {
 			}
 			else {
 				COwork = COwork + 5;
+				break;
 			}
 		}
+		System.out.println("Добавляют ли в солянку оливки?");
+		while (console.hasNextLine()) {
+			c = console.nextLine();
+			if (!(c.equalsIgnoreCase("Да") || c.equalsIgnoreCase("Нет"))) {
+				System.out.println("Отвечайте \"Да\" или \"Нет\", пожалуйста.");
+			}
+			else if (c.equalsIgnoreCase("Нет")) {
+				break;
+			}
+			else {
+				COwork = COwork + 5;
+				break;
+			}
+		}
+		System.out.println("Небольшое количество алкоголя разрешено экипажу корабля?");
+		while (console.hasNextLine()) {
+			c = console.nextLine();
+			if (!(c.equalsIgnoreCase("Да") || c.equalsIgnoreCase("Нет"))) {
+				System.out.println("Отвечайте \"Да\" или \"Нет\", пожалуйста.");
+			}
+			else if (c.equalsIgnoreCase("Нет")) {
+				COwork = COwork + 5;
+				break;
+			}
+			else {
+				break;
+			}
+		}
+		System.out.println("В случае экстренной ситуациии голода, капитану корабля положено два пайка вместо одного, как другим членам команды?");
+		while (console.hasNextLine()) {
+			c = console.nextLine();
+			if (!(c.equalsIgnoreCase("Да") || c.equalsIgnoreCase("Нет"))) {
+				System.out.println("Отвечайте \"Да\" или \"Нет\", пожалуйста.");
+			}
+			else if (c.equalsIgnoreCase("Нет")) {
+				break;
+			}
+			else {
+				COwork = COwork + 5;
+				break;
+			}
+		}	
 	}
+	public void finalQuest (Scanner console) {
+		System.out.println("Финальный вопрос. Внимание!");
+		System.out.println("Котлетки с макорошками?");
+		String c = null;
+		while (console.hasNextLine()) {
+		c = console.nextLine();
+		if (!c.equalsIgnoreCase("Пюрешкой")) {
+			System.out.println("Извините, но программа определила, что ваших навыков и знаний недостаточно.");
+			System.out.println("Вы нам не подходите. Попробуйте еще раз, когда наберетесь опыта.");
+			break;
+			}
+		else {
+			System.out.println("У нас хорошие новости для вас!");
+			System.out.println("Вы нам подходите!");
+			System.out.println("Ожидайте, свями свяжется наш специалист");
+			break;
+			}	
+		}
+	} 
 	
 }

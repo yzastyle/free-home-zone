@@ -22,9 +22,6 @@ class hunttospace {
 		PF.setPolitInternal(console);
 		PF.politResult(console, PF.getPolitSumm());
 		CommonText.goToRolePart();
-		boolean DO = false;
-		boolean WM = false;
-		boolean DE = false;
 		while (console.hasNextLine()) {
 			String q = console.nextLine();
 			if (!(q.equalsIgnoreCase("CO") || q.equalsIgnoreCase("DO") || q.equalsIgnoreCase("WM") || q.equalsIgnoreCase("DE"))) {
@@ -51,79 +48,25 @@ class hunttospace {
 			}
 			else {
 				if (q.equalsIgnoreCase("DO")) {
-					DO = true;
+					DO DOrole = new DO();
+					DOrole.workEndExp(console);
+					DOrole.mainSickOnShip(console);
+					System.out.println("У нас хорошие новости для вас!");
+					System.out.println("Вы нам подходите!");
+					System.out.println("Ожидайте, свями свяжется наш специалист");
 					break;
 				}
 				else if (q.equalsIgnoreCase("WM")) {
-					WM = true;
+					System.out.println("К сожалению на данную роль набор уже завершен.");
+					System.out.println("Оставьте, свой номер телефона и мы вам отправим СМС сообщение, когда появится вакансия");
+					int tel = console.nextInt();
 					break;
 				}
 				else {
-					DE = true;
+					System.out.println("Ты бредишь что ли?");
 					break;
 				}
 			}
 		}
-		
-		/*
-		boolean CO = false;
-		boolean DO = false;
-		boolean WM = false;
-		boolean DE = false;
-		while (console.hasNextLine()) {
-			String q = console.nextLine();
-			if (q.equalsIgnoreCase("CO")) {
-				CO = true;
-				break;
-			}
-			else if (q.equalsIgnoreCase("DO")) {
-				DO = true;
-				break;
-			}
-			else {
-				if (q.equalsIgnoreCase("WM")) {
-					WM = true;
-					break;
-				}
-				else if (q.equalsIgnoreCase("DE")) {
-					DE = true;
-					break;
-				}
-				else {
-					System.out.println("Указывайте, пожалуйста, одно из значений: CO, DO, WM, DE");
-				}
-			}
-		}
-		if (CO) {
-			System.out.println("Работали ли вы когда-нибудь поваром на космическом корабле?");
-			int work = 0;
-			while (console.hasNextLine()) {
-				String q = console.nextLine();
-				if (q.equalsIgnoreCase("Да")) {
-					work = 10;
-					break;
-				}
-				else if (q.equalsIgnoreCase("Нет")) {
-					break;
-				}
-				else {
-					System.out.println("Отвечайте \"Да\" или \"Нет\", пожалуйста.");
-				}
-			}
-			System.out.println("Назовите, пожалуйста, какие по вашему мнению 4 основных блюда путенского пехотинца.");
-			String[] putmenu = {"", "", "", ""};
-			
-		}
-		else if (DO) {
-			System.out.println("Venrf doctar");
-		}
-		else {
-			if (WM) {
-				System.out.println("vetka strelka");
-			}
-			else {
-				System.out.println("DE");
-			}
-		} */
 	} 
 }

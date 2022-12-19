@@ -26,7 +26,7 @@ public class Homework {
 		
 		ArrayList<Integer> removedNegativeValueList = new ArrayList<>();
 		for (int i = 0; i < List.size() - 1; i++) {
-			if ((List.get(i) % 2) == 0) {
+			if ((List.get(i) % 2) != 0) {
 				removedNegativeValueList.add(List.get(i));
 			}
 		}
